@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+
+	{% block title %}
+		post_list
+	{% endblock %}
+
+	{% block content %}
+
+	
+
+
+	<h2 class="mb-5">First page in folder blog> templates>blog</h2>
+	<h2 class="mb-5">After we made POSTS:</h2>
+
+		{% for post in posts %}
+
+{% include 'blog/includes/post_card_template.html' %}
+		<hr>
+
+
+		{% endfor %}
+
+	<a href="{% url 'posts_list_url' %}" class="btn btn-primary">visit all posts</a>
+	<a href="{% url 'tag_detail_url' slug='django' %}" class="btn btn-primary">visit tag django</a>
+
+	{% endblock  %}
+
+
+	
+
